@@ -1,6 +1,5 @@
 package com.theironyard;
 
-import java.util.Random;
 import java.util.Scanner;
 
 /** Riggins 2016
@@ -9,7 +8,6 @@ import java.util.Scanner;
 public class Main {
 
     static Scanner scanner = new Scanner(System.in);
-
 
     public static void main(String[] args) throws Exception {
         System.out.println();
@@ -39,6 +37,7 @@ public class Main {
             System.out.println();
             System.out.println("Your name is " + name + ".");
         }
+
         System.out.println();
         System.out.println("Select your character's race:");
         System.out.println("1 - Human");
@@ -47,14 +46,11 @@ public class Main {
 
         System.out.println();
         String race = scanner.nextLine();
+
         if (race.isEmpty()) {
             race = "Human";
         }
-        else if (race.equals("1") || (race.equalsIgnoreCase("human"))) {
-            race = "Human";
-
-        }
-        else if (race.equals("2") || (race.equalsIgnoreCase("orc"))) {
+        if (race.equals("2") || (race.equalsIgnoreCase("orc"))) {
             race = "Orc";
         }
         else if (race.equals("3") || (race.equalsIgnoreCase("goblin"))) {
@@ -98,8 +94,5 @@ public class Main {
         System.out.println("You equipped the " + weapon + ".");
 
         //continue with restrictions for weapon
-
-
-
     }
 }
